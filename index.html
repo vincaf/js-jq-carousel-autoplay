@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Carosello Array</title>
+
+
+    <!-- Importing font-awesome 6.1 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <!-- Importing Boostrap v5.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- Importing custom css stylesheet -->
+    <link rel="stylesheet" href="./style.css" >
+</head>
+<body>
+
+    <main>
+        <div class="container-fluid">
+            <div class="row p-3 g-3" id="number-wrapper">
+                <div class="col-12">
+                    <h1 class="p-3 text-center fw-bolder mb-4">Carosello Array</h1>
+                    <div class="carousel-wrapper d-flex flex-column w-75 mx-auto">
+                        <div class="carousel-image-container mb-4">
+                            <!-- inserire dinamicamente le immagini qui -->
+                        </div>
+
+                        <div class="carousel-navigation d-flex justify-content-between">
+                            <a href="#" class="btn btn-primary btn-lg" id="prev-button">Previous</a>
+                            <div class="thumbnails-container d-flex justify-content-around">
+                                <!-- inserire dinamicamente le thumbnails qui -->
+
+                            </div>
+                            <a href="#" class="btn btn-primary btn-lg" id="next-button">Next</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!--  ? JS importato esternamente -->
+    <script type="text/javascript" src="./script.js"></script>
+</body>
+</html>

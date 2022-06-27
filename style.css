@@ -1,0 +1,25 @@
+.carousel-image-container{
+    height: 55vh;
+}
+
+.carousel-wrapper .carousel-image-container img{
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    border-radius: .5%;
+}
+
+.carousel-wrapper .carousel-image-container img.active{
+    display: block;
+}
+
+.carousel-wrapper .thumbnails-container i{
+    padding: 1rem .2rem;
+    font-size: 1.3rem;
+}
+
+.carousel-wrapper .thumbnails-container i.active{
+    color: magenta;
+}
