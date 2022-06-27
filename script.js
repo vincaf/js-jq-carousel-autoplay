@@ -7,7 +7,7 @@ const images = [
     'https://mymodernmet.com/wp/wp-content/uploads/2020/02/Landscape-Photographer-of-the-Year-Sander-Grefte.jpg'
     ];
 
-let activeImageIndex = 4;
+let activeImageIndex = 0;
 
 // recupero il parent all'interno del quale inserire le immagini
 const imagesWrapper = document.querySelector('.carousel-wrapper .carousel-image-container');
@@ -38,12 +38,6 @@ for (let index = 0 ; index < images.length ; index++){
     // lo aggiungo al parent
     imagesWrapper.append(currentImage);
     thumbnailsWrapper.append(currentThumbnail);
-
-    // if ( index === activeImageIndex ){
-    //     imagesWrapper.innerHTML += `<img class="active" src="${images[index]}" alt="Landscape picture"></img>`
-    // } else {
-    //     imagesWrapper.innerHTML += `<img src="${images[index]}" alt="Landscape picture"></img>`
-    // }
 }
 
 const prevButton = document.getElementById('prev-button');
@@ -76,7 +70,6 @@ nextButton.addEventListener('click', function(){
     thumbnailElements[activeImageIndex].classList.add('active');
 });
 
-
 prevButton.addEventListener('click', function(){
     // prendo l'immagine attiva =>  .carousel-image-container img.active
     imageElements[activeImageIndex].classList.remove('active');
@@ -93,3 +86,17 @@ prevButton.addEventListener('click', function(){
     imageElements[activeImageIndex].classList.add('active');
     thumbnailElements[activeImageIndex].classList.add('active');
 });
+
+// ***************
+// TIMING FUNCTION PER SCORRIMENTO SLIDE AUTOMATICO OGNI 3 SECONDI
+
+const nextSlideAuto = setInterval(function(){
+    imageElements[activeImageIndex].classList.remove('active');
+    thumbnailElements[activeImageIndex].classList.remove('active');
+    activeImageIndex++;
+    if (activeImageIndex === images.length) {
+        activeImageIndex = 0;
+    }
+    imageElements[activeImageIndex].classList.add('active');
+    thumbnailElements[activeImageIndex].classList.add('active');
+}, 3000);
